@@ -37,6 +37,23 @@
     src: url(../fonts/Misto-400.ttf);
 }
 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 2px 2px 10px #c2bebe;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a39788;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -69,6 +86,7 @@ body {
     font-family: "misto";
     font-weight: 400;
     font-size: 70px;
+    padding-top: 10px;
 }
 
 button,
@@ -88,7 +106,8 @@ a {
 /*************** БУРГЕР МЕНЮ ****************/
 .menu {
     margin-top: 35px;
-    margin-left: 35px;
+    display: flex;
+    align-items: center;
 }
 
 .burger-checkbox {
@@ -97,7 +116,7 @@ a {
 }
 
 .burger {
-    position: relative;
+    position: absolute;
     z-index: 1;
     cursor: pointer;
     display: block;
@@ -145,19 +164,16 @@ a {
 }
 
 .menu-list {
-    top: 30px;
-    left: calc(100px + 50px);
-    position: absolute;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin: 0;
     padding: 5px 35px;
     background: #998E81;
     border-radius: 10px;
     list-style-type: none;
-    transform: translateX(-100%);
+    transform: translateX(-400%);
     visibility: hidden;
     transition: .5s;
     max-width: 615px;
@@ -743,9 +759,10 @@ footer {
     cursor: pointer;
 }
 
-.search-button:focus {
+.search-form .search-input:focus {
     outline: none;
 }
+
 
 .search-button i {
     font-size: 16px;
@@ -1532,6 +1549,7 @@ footer {
     border: 3px solid transparent;
     border-image: linear-gradient(to bottom left, #ffffff, #ffffff00) 1;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .sign_up_form h2 {
@@ -1602,6 +1620,18 @@ footer {
     font-size: 13px;
 }
 
+.payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    max-width: 1200px;
+    margin-left: 200px;
+}
+
+.payment_pay {
+    margin: 0;
+}
 
 .payment_deliv_input {
     display: flex;
@@ -1970,6 +2000,37 @@ footer {
     color: #5F2417;
 }
 
+
+/* Стили для подсказок */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #CBC0B2;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
 .header_admin {
     display: flex;
     justify-content: center;
@@ -1993,8 +2054,8 @@ footer {
 
 .admin_head_block_icons {
     display: flex;
-    justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 10px;
 }
 
@@ -2056,8 +2117,8 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 70px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 100px;
     font-weight: bold;
     background-color: #F2EEE9;
     max-width: 1050px;
@@ -2088,9 +2149,9 @@ footer {
 }
 
 .user_row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
-    align-items: center;
     gap: 30px;
     padding: 10px 20px;
     height: 50px;
@@ -2099,27 +2160,20 @@ footer {
 
 .user_row div {
     flex: 1;
-    text-align: center;
+    display: flex;
     font-size: 15px;
-    width: 30px;
+    width: 100px;
     height: 30px;
+}
+
+.admin_btn_blok_mobail button i {
+    display: none;
 }
 
 .user_row button {
     border: none;
     background: none;
     font-size: 15px;
-    text-decoration: underline;
-}
-
-.load_more_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    border: none;
-    background: none;
-    font-size: 20px;
     text-decoration: underline;
 }
 
@@ -2194,9 +2248,7 @@ footer {
 
 .admin_hd_categ {
     display: grid;
-    align-items: center;
     justify-content: center;
-    text-align: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 200px;
     font-weight: bold;
@@ -2204,6 +2256,7 @@ footer {
     max-width: 1050px;
     min-height: 50px;
     padding: 10px 20px;
+    width: 100%;
 }
 
 .admin_hd_categ div {
@@ -2215,6 +2268,9 @@ footer {
 }
 
 .admin_btn_blok {
+    border: none;
+    background: none;
+    font-size: 15px;
     text-decoration: underline;
 }
 
@@ -2232,7 +2288,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 200px;
     padding: 10px 20px;
     height: 50px;
     width: 100%;
@@ -2240,7 +2296,7 @@ footer {
 }
 
 .user_row_categ div {
-    flex: 1;
+    display: grid;
     text-align: center;
     font-size: 15px;
     width: 100%;
@@ -2254,8 +2310,11 @@ footer {
     text-decoration: underline;
 }
 
-
-
+.user_row_categ .user_id {
+    max-width: 95px;
+    display: flex;
+    justify-content: start;
+}
 
 .admin_panel_cata {
     display: flex;
@@ -2293,6 +2352,9 @@ footer {
 }
 
 .admin_btn_blok {
+    border: none;
+    background: none;
+    font-size: 15px;
     text-decoration: underline;
 }
 
@@ -2318,14 +2380,18 @@ footer {
 }
 
 .user_row_cata div {
-    flex: 1;
+    display: grid;
     text-align: center;
     font-size: 15px;
     width: 100%;
     height: 30px;
 }
 
-
+.user_row_cata .user_id {
+    max-width: 138px;
+    display: flex;
+    justify-content: start;
+}
 
 
 
@@ -2364,7 +2430,10 @@ footer {
     font-size: 15px;
 }
 
-.admin_btn_blok {
+.admin_btn_blok button {
+    border: none;
+    background: none;
+    font-size: 15px;
     text-decoration: underline;
 }
 
@@ -2382,7 +2451,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 140px;
     padding: 10px 20px;
     height: 50px;
     width: 100%;
@@ -2390,11 +2459,19 @@ footer {
 }
 
 .user_row_tovar div {
-    flex: 1;
+    display: grid;
     text-align: center;
     font-size: 15px;
     width: 100%;
     height: 30px;
+}
+
+
+.user_row_tovar .user_id {
+    max-width: 138px;
+    display: flex;
+    justify-content: start;
+    align-self: start;
 }
 
 
@@ -2418,6 +2495,16 @@ footer {
         max-width: 760px;
         margin: 0 auto;
     }
+
+    .menu-list {
+        left: 10%;
+    }
+
+    .menu {
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+
 
     .banner {
         gap: 0;
@@ -3112,6 +3199,19 @@ footer {
     }
 
 
+    .payment {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        max-width: 1000px;
+        margin-left: 0;
+    }
+    .payment_pay {
+        margin: 0;
+    }    
+
+
     .payment_deliv_label {
         display: flex;
         flex-direction: column;
@@ -3387,10 +3487,6 @@ footer {
         font-size: 15px;
     }
 
-    .admin_btn_blok {
-        text-decoration: underline;
-    }
-
     .admin_table {
         width: 100%;
         border-collapse: collapse;
@@ -3655,9 +3751,6 @@ footer {
         font-size: 15px;
     }
 
-    .admin_btn_blok {
-        text-decoration: underline;
-    }
 
     .admin_btn_blok_mobail {
         display: none;
@@ -3713,9 +3806,10 @@ footer {
         display: none;
     }
 
-    /* .burger-checkbox {
+
+    .burger-checkbox {
         display: none;
-    } */
+    }
 
     .head_mobile {
         display: flex;
@@ -3725,9 +3819,10 @@ footer {
         width: 100%;
     }
 
-    .head_mobile .menu-list {
+    .head_mobile .menu-lists {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 15px;
         margin: 35px 0 0 0;
         padding: 5px 20px;
@@ -3738,10 +3833,7 @@ footer {
         max-width: 353px;
         width: 100%;
         top: 0;
-        left: 12px;
         position: fixed;
-        transform: none;
-        transition: none;
         z-index: 999;
     }
 
@@ -3773,6 +3865,15 @@ footer {
         font-size: 12px;
         text-align: center;
         text-decoration: none;
+    }
+
+    .burger-checkbox:checked~.menu-list {
+        transform: none;
+    }
+
+    .menu-list--visible {
+        transform: none;
+        visibility: collapse;
     }
 
     footer {
@@ -3845,6 +3946,7 @@ footer {
     .banner {
         margin-top: 80px;
         gap: 0;
+        overflow: hidden;
     }
 
     .banner h1 {
@@ -3906,6 +4008,7 @@ footer {
         animation: anim 3s ease-in-out infinite;
         min-width: 83px;
         min-height: 113px;
+
     }
 
     .banner_cake_mobile {
@@ -4227,12 +4330,13 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         margin-bottom: 0;
     }
 
     .tovar_crumbs p,
     .tovar_crumbs a {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .tovar_block {
@@ -4796,7 +4900,7 @@ footer {
     .sign_up_form input {
         border: 1px solid #29231d59;
         padding: 10px 5px;
-        min-width: 239px;
+        max-width: 239px;
         border-radius: 12px;
         background: none;
         margin: 10px 0 10px 0;
@@ -4823,8 +4927,17 @@ footer {
 
     .sign_up_confid {
         display: flex;
-        margin: 0 10px 0 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
         gap: 5px;
+    }
+
+    .sign_up_confid input {
+        align-self: start;
+        margin: 0;
+        max-width: 15px;
+        max-height: 15px;
     }
 
     .sign_up_confid label,
@@ -5049,10 +5162,6 @@ footer {
         font-size: 10px;
     }
 
-    .admin_btn_blok {
-        text-decoration: underline;
-    }
-
     .admin_btn_blok_mobail {
         display: none;
     }
@@ -5088,17 +5197,6 @@ footer {
         text-decoration: underline;
     }
 
-    .load_more_button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        border: none;
-        background: none;
-        font-size: 20px;
-        text-decoration: underline;
-    }
-
     .admin_pan_search {
         display: flex;
         flex-direction: column;
@@ -5128,7 +5226,7 @@ footer {
 
     .admin_panel_categ h2 {
         font-size: 20px;
-        margin-bottom: 55px;
+        margin-bottom: 20px;
     }
 
     .admin_categ_btn {
@@ -5230,7 +5328,7 @@ footer {
 
     .admin_panel_cata h2 {
         font-size: 20px;
-        margin-bottom: 55px;
+        margin-bottom: 20px;
     }
 
     .admin_categ_btn {
@@ -5274,7 +5372,10 @@ footer {
         font-size: 10px;
     }
 
-    .admin_btn_blok {
+    .admin_btn_blok button {
+        border: none;
+        background: none;
+        font-size: 10px;
         text-decoration: underline;
     }
 
@@ -5290,9 +5391,9 @@ footer {
 
     .user_row_cata {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
         padding: 10px 20px;
         height: 50px;
         width: 100%;
@@ -5306,6 +5407,7 @@ footer {
         width: 100%;
         height: 30px;
     }
+
 
     .admin_categ_btn {
         padding: 15px 35px;
@@ -5323,7 +5425,7 @@ footer {
 
     .admin_panel_tovar h2 {
         font-size: 20px;
-        margin-bottom: 55px;
+        margin-bottom: 20px;
     }
 
     .admin_hd_tovar {
@@ -5349,6 +5451,9 @@ footer {
     }
 
     .admin_btn_blok {
+        border: none;
+        background: none;
+        font-size: 10px;
         text-decoration: underline;
     }
 
@@ -5363,10 +5468,7 @@ footer {
     }
 
     .user_row_tovar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
+        gap: 10px;
         padding: 10px 20px;
         height: 50px;
         width: 100%;
@@ -5380,6 +5482,5 @@ footer {
         width: 100%;
         height: 30px;
     }
-
 
 }

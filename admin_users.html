@@ -25,12 +25,24 @@
         <div class="container">
             <div class="admin_head">
                 <div class="admin_head_block">
-                    <h4>CHARLIE</h4>
+                    <a href="index.html"><h4>CHARLIE</h4></a>
                     <div class="admin_head_block_icons">
-                        <a href="admin_users.html"><i class="fa-solid fa-user" style="color: #F2EEE9;"></i></a>
-                        <a href="admin_categories.html"><i class="fa-solid fa-list" style="color: #29231d;"></i></a>
-                        <a href="admin_catalog.html"><img src="assets/img/admin_head/icon_b.svg" alt=""></a>
-                        <a href="admin_tovar.html"><i class="fa-solid fa-box" style="color: #29231d;"></i></a>
+                        <div class="tooltip">
+                            <a href="admin_users.html"><i class="fa-solid fa-user" style="color: #F2EEE9;"></i></a>
+                            <span class="tooltiptext">пользователи</span>
+                        </div>
+                        <div class="tooltip">
+                            <a href="admin_categories.html"><i class="fa-solid fa-list" style="color: #29231d;"></i></a>
+                            <span class="tooltiptext">категории</span>
+                        </div>
+                        <div class="tooltip">
+                            <a href="admin_catalog.html"><img src="assets/img/admin_head/icon_b.svg" alt=""></a>
+                            <span class="tooltiptext">каталог</span>
+                        </div>
+                        <div class="tooltip">
+                            <a href="admin_tovar.html"><i class="fa-solid fa-box" style="color: #29231d;"></i></a>
+                            <span class="tooltiptext">товары</span>
+                        </div>
                     </div>
                 </div>
                 <div class="admin_head_block1">
@@ -47,17 +59,23 @@
 
     <!--------------- АДМИН ПАНЕЛЬ ПОЛЬЗОВАТЕЛЕЙ --------------->
     <div class="admin_panel container">
-        <h2>пользователи</h2>
+        <div class="admin_pan_search">
+            <h2>пользователи</h2>
+            <div class="products_search">
+                <form action="#" class="search-form">
+                    <button type="submit" class="search-button">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #29231d;"></i>
+                    </button>
+                    <input type="text" placeholder="поиск" class="search-input">
+                </form>
+            </div>
+        </div>
         <div class="admin_hd">
             <div>id</div>
             <div>фамилия</div>
             <div>имя</div>
             <div>телефон</div>
             <div>email</div>
-            <div>город</div>
-            <div>почтовый<br>индекс</div>
-            <div class="admin_btn_blok">заблокировать</div>
-            <i class="fa-solid fa-user-minus admin_btn_blok_mobail" style="color: #29231d;"></i>
         </div>
         <div class="admin_table">
             <div class="user_row">
@@ -65,9 +83,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
                 <div class="admin_btn_blok_mobail user_btn"><button><i class="fa-solid fa-user-minus"
                             style="color: #29231d;"></i></button></div>
@@ -77,9 +93,7 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -87,9 +101,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -97,9 +109,7 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -107,9 +117,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -117,9 +125,7 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -127,9 +133,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -137,9 +141,7 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -147,9 +149,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -157,9 +157,7 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -167,9 +165,7 @@
                 <div class="user_lastn over-x">Иванов</div>
                 <div class="user_name over-x">Иван</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">ivan@example.com</div>
-                <div class="user_city over-y">Москва</div>
-                <div class="user_index">123456</div>
+                <div class="user_email over-x">ivan@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
             <div class="user_row">
@@ -177,13 +173,10 @@
                 <div class="user_lastn over-x">Петров</div>
                 <div class="user_name over-x">Петр</div>
                 <div class="user_phone over-y">8(456)644-64-46</div>
-                <div class="user_email over-x">peter@example.com</div>
-                <div class="user_city over-y">Санкт-Петербург</div>
-                <div class="user_index">654321</div>
+                <div class="user_email over-x">peter@mail.com</div>
                 <div class="admin_btn_blok user_btn"><button>заблокировать</button></div>
             </div>
         </div>
-        <button class="load_more_button">показать ещё</button>
     </div>
     <!--------------- АДМИН ПАНЕЛЬ ПОЛЬЗОВАТЕЛЕЙ --------------->
 

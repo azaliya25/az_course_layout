@@ -32,7 +32,7 @@
                         <li>
                         <li><a href="categories.html" class="menu-item">категории</a>
                         <li>
-                        <li><a href="" id="contact" class="menu-item">контакты</a>
+                        <li><a href="#contact" class="menu-item">контакты</a>
                         <li>
                     </div>
                     <div class="menu_icons">
@@ -46,12 +46,29 @@
                 </ul>
             </div>
 
+
+            <script class="script_head">
+                document.addEventListener('DOMContentLoaded', () => {
+                    const burgerCheckbox = document.getElementById('burger-checkbox');
+                    const menuList = document.querySelector('.menu-list');
+
+                    burgerCheckbox.addEventListener('change', () => {
+                        if (burgerCheckbox.checked) {
+                            menuList.classList.add('menu-list--visible');
+                        } else {
+                            menuList.classList.remove('menu-list--visible');
+                        }
+                    });
+                });
+            </script>
+
+
             <div class="head_mobile">
-                <ul class="menu-list">
+                <ul class="menu-lists">
                     <div class="menu_nav">
-                       <a href="index.html" class="menu-item">главная</a>
+                        <a href="index.html" class="menu-item">главная</a>
                         <a href="categories.html" class="menu-item">категории</a>
-                        <a href="" id="contact" class="menu-item">контакты</a>
+                        <a href="#contact" class="menu-item">контакты</a>
                     </div>
                     <div class="menu_icons">
                         <li><a href="favourites.html"><i class="fa-regular fa-heart" style="color: #F2EEE9;"></i></a>
@@ -69,7 +86,9 @@
 
     <!--------------- ЛОГОТИП --------------->
     <div class="title container">
-        <h1>CHARLIE</h1>
+        <a href="index.html">
+            <h1>CHARLIE</h1>
+        </a>
     </div>
     <!--------------- ЛОГОТИП --------------->
 
@@ -185,7 +204,7 @@
 
 
     <!--------------- ПОДВАЛ --------------->
-    <footer id="#contact">
+    <footer id="contact">
         <div class="container">
             <div class="footer_block">
                 <div class="footer_info">

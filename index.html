@@ -32,7 +32,7 @@
                         <li>
                         <li><a href="categories.html" class="menu-item">категории</a>
                         <li>
-                        <li><a href="" id="contact" class="menu-item">контакты</a>
+                        <li><a href="#contact" class="menu-item">контакты</a>
                         <li>
                     </div>
                     <div class="menu_icons">
@@ -46,27 +46,29 @@
                 </ul>
             </div>
 
-            <script>
-                const burgerCheckbox = document.getElementById('burger-checkbox');
-                const menuList = document.querySelector('.menu-list');
 
-                burgerCheckbox.addEventListener('change', () => {
-                    if (burgerCheckbox.checked) {
-                        menuList.classList.add('menu-list--visible');
-                    } else {
-                        menuList.classList.remove('menu-list--visible');
-                    }
+            <script class="script_head">
+                document.addEventListener('DOMContentLoaded', () => {
+                    const burgerCheckbox = document.getElementById('burger-checkbox');
+                    const menuList = document.querySelector('.menu-list');
+
+                    burgerCheckbox.addEventListener('change', () => {
+                        if (burgerCheckbox.checked) {
+                            menuList.classList.add('menu-list--visible');
+                        } else {
+                            menuList.classList.remove('menu-list--visible');
+                        }
+                    });
                 });
-
             </script>
 
 
             <div class="head_mobile">
-                <ul class="menu-list">
+                <ul class="menu-lists">
                     <div class="menu_nav">
                         <a href="index.html" class="menu-item">главная</a>
                         <a href="categories.html" class="menu-item">категории</a>
-                        <a href="" id="contact" class="menu-item">контакты</a>
+                        <a href="#contact" class="menu-item">контакты</a>
                     </div>
                     <div class="menu_icons">
                         <li><a href="favourites.html"><i class="fa-regular fa-heart" style="color: #F2EEE9;"></i></a>
@@ -88,10 +90,12 @@
         <img src="assets/img/banner/chocolate_tablet.svg" class="banner_chocolate_tablet" alt="">
         <img src="assets/img/banner/chocolate_mobile.svg" class="banner_chocolate_mobile" alt="">
         <div class="text container">
-            <h1>CHARLIE</h1>
+            <a href="index.html">
+                <h1>CHARLIE</h1>
+            </a>
             <hr>
             <p>создавай шедевры с помощью<br>наших продукций!</p>
-            <button>каталог</button>
+            <button onclick="document.location.href='categories.html'">категории</button>
         </div>
         <img src="assets/img/banner/cake.svg" class="banner_cake" alt="">
         <img src="assets/img/banner/cake_tablet.svg" class="banner_cake_tablet" alt="">
@@ -154,7 +158,7 @@
     <!--------------- ПРЕИМУЩЕСТВА --------------->
 
     <!--------------- ПОДВАЛ --------------->
-    <footer id="#contact">
+    <footer id="contact">
         <div class="container">
             <div class="footer_block">
                 <div class="footer_info">
