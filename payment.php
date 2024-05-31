@@ -1,3 +1,8 @@
+<?
+include ('includes/connect.php');
+include ('includes/header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -13,80 +18,9 @@
 </head>
 
 <body>
-
-    <!--------------- КНОПКА ВВЕРХ --------------->
-    <div class="to-up">
-        <a href="#"><img src="assets/img/to-up/up.svg" alt=""></a>
-    </div>
-    <!--------------- КНОПКА ВВЕРХ --------------->
-
-    <!--------------- ШАПКА --------------->
-    <header>
-        <div class="container">
-            <div class="menu">
-                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-                <label for="burger-checkbox" class="burger"></label>
-                <ul class="menu-list">
-                    <div class="menu_nav">
-                        <li><a href="index.html" class="menu-item">главная</a>
-                        <li>
-                        <li><a href="categories.html" class="menu-item">категории</a>
-                        <li>
-                        <li><a href="#contact" class="menu-item">контакты</a>
-                        <li>
-                    </div>
-                    <div class="menu_icons">
-                        <li><a href="favourites.html"><i class="fa-regular fa-heart" style="color: #F2EEE9;"></i></a>
-                        <li>
-                        <li><a href="basket.html"><img src="assets/img/header_basket.svg" alt=""></a>
-                        <li>
-                        <li><a href="login_up.html"><i class="fa-regular fa-user" style="color: #F2EEE9;"></i></a>
-                        <li>
-                    </div>
-                </ul>
-            </div>
-
-
-            <script class="script_head">
-                document.addEventListener('DOMContentLoaded', () => {
-                    const burgerCheckbox = document.getElementById('burger-checkbox');
-                    const menuList = document.querySelector('.menu-list');
-
-                    burgerCheckbox.addEventListener('change', () => {
-                        if (burgerCheckbox.checked) {
-                            menuList.classList.add('menu-list--visible');
-                        } else {
-                            menuList.classList.remove('menu-list--visible');
-                        }
-                    });
-                });
-            </script>
-
-
-            <div class="head_mobile">
-                <ul class="menu-lists">
-                    <div class="menu_nav">
-                        <a href="index.html" class="menu-item">главная</a>
-                        <a href="categories.html" class="menu-item">категории</a>
-                        <a href="#contact" class="menu-item">контакты</a>
-                    </div>
-                    <div class="menu_icons">
-                        <li><a href="favourites.html"><i class="fa-regular fa-heart" style="color: #F2EEE9;"></i></a>
-                        <li>
-                        <li><a href="basket.html"><img src="assets/img/header_basket.svg" alt=""></a>
-                        <li>
-                        <li><a href="login_up.html"><i class="fa-regular fa-user" style="color: #F2EEE9;"></i></a>
-                        <li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <!--------------- ШАПКА --------------->
-
     <!--------------- ЛОГОТИП --------------->
     <div class="title container">
-        <a href="index.html">
+        <a href="index.php">
             <h1>CHARLIE</h1>
         </a>
     </div>
@@ -104,17 +38,17 @@
                             <h3>1. ДОСТАВКА</h3>
                             <div class="deliv_div">
                                 <label for="address" class="payment_fs">адрес</label>
-                                <input type="text" id="address" name="address" class="payment_fs" required>
+                                <input type="text" id="address" name="address" class="payment_fs">
                             </div>
                             <div class="payment_deliv_input">
                                 <p class="payment_fs">способ<br>доставки</p>
                                 <div class="payment_deliv_label">
                                     <label>
-                                        <input type="radio" name="delivery_method" value="pickup" required>
+                                        <input type="radio" name="delivery_method" value="pickup">
                                         <span>курьер</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="delivery_method" value="courier" required>
+                                        <input type="radio" name="delivery_method" value="courier">
                                         <span>самовывоз</span>
                                     </label>
                                 </div>
@@ -130,7 +64,7 @@
                                 <input type="text" id="recipient_first_name" name="recipient_first_name"
                                     placeholder="имя" required>
                                 <input type="tel" id="recipient_phone" name="recipient_phone"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="телефон" required>
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="телефон">
                                 <input type="email" id="recipient_email" name="recipient_email" placeholder="email"
                                     required>
                             </div>
@@ -201,39 +135,10 @@
     </div>
     <!--------------- ОПЛАТА --------------->
 
-
-    <!--------------- ПОДВАЛ --------------->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer_block">
-                <div class="footer_info">
-                    <div class="footer_icons">
-                        <h3>CHARLIE</h3>
-                        <div class="footer_icons_i">
-                            <i class="fa-brands fa-telegram" style="color: #f2eee9;"></i>
-                            <i class="fa-brands fa-vk" style="color: #f2eee9;"></i>
-                            <i class="fa-brands fa-square-whatsapp" style="color: #f2eee9;"></i>
-                        </div>
-                    </div>
-                    <div class="footer_call">
-                        <p>помоги нам<br>развиваться!</p>
-                    </div>
-                    <div class="footer_contact">
-                        <h4>наши контакты</h4>
-                        <a href="tel:+79934187660">+7 (993) 418-76-60</a>
-                        <a href="mailto:kadyeva_azaliya@mail.ru">kadyeva_azaliya@mail.ru</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="footer_rights">
-                    <p>© azaliya 2024 Все права защищены. Используя сайт, вы принимаете<br>условия соглашений
-                        Информация
-                        на сайте не является публичной офертой.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--------------- ПОДВАЛ --------------->
 </body>
 
 </html>
+
+<?
+include ('includes/footer.php');
+?>

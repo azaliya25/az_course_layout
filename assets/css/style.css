@@ -37,23 +37,6 @@
     src: url(../fonts/Misto-400.ttf);
 }
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 2px 2px 10px #c2bebe;
-    background-color: #F5F5F5;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #a39788;
-}
-
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -94,6 +77,23 @@ a {
     cursor: pointer;
 }
 
+/*************** СКРОЛЛ СТРАНИЦЫ ****************/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 2px 2px 10px #c2bebe;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a39788;
+}
+
 /*************** КНОПКА ВВЕРХ ****************/
 .to-up img {
     position: fixed;
@@ -102,6 +102,7 @@ a {
     max-width: 70px;
 }
 
+/*************** ГЛАВНАЯ СТРАНИЦА ****************/
 /*************** ШАПКА ****************/
 /*************** БУРГЕР МЕНЮ ****************/
 .menu {
@@ -292,9 +293,7 @@ a {
     display: none;
 }
 
-
 /*************** О НАС ****************/
-
 .about {
     display: flex;
     justify-content: center;
@@ -334,7 +333,6 @@ a {
 }
 
 /*************** ПРЕИМУЩЕСТВА ****************/
-
 .advantages {
     display: flex;
     flex-direction: column;
@@ -403,7 +401,6 @@ a {
 }
 
 /*************** ПОДВАЛ ****************/
-
 footer {
     display: flex;
     justify-content: center;
@@ -502,7 +499,7 @@ footer {
     color: #F2EEE9;
 }
 
-
+/*************** СТРАНИЦА О НАС ****************/
 .about_cont {
     display: flex;
     justify-content: center;
@@ -568,6 +565,7 @@ footer {
     text-decoration: underline;
 }
 
+/*************** СТРАНИЦА КАТЕГОРИИ ****************/
 .categories {
     display: flex;
     flex-direction: column;
@@ -626,19 +624,19 @@ footer {
     letter-spacing: 1px;
 }
 
-
+/*************** СТРАНИЦА КАТАЛОГА ****************/
 .catalog {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
     padding: 0 0 100px 0;
 }
 
 .catalog h2 {
     display: flex;
     font-size: 50px;
-    margin: 50px 0 30px 30px;
+    margin: 50px 0 30px 0;
     align-self: flex-start;
 }
 
@@ -677,10 +675,12 @@ footer {
 
 .catalog_card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     text-align: center;
     flex-wrap: wrap;
+    gap: 5px;
     width: 215px;
     height: 170px;
     padding: 15px;
@@ -695,10 +695,15 @@ footer {
 }
 
 .catalog_card h4 {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    justify-content: flex-end;
     font-size: 15px;
     letter-spacing: 1px;
 }
 
+/*************** СТРАНИЦА ТОВАРОВ ****************/
 .products {
     display: flex;
     justify-content: center;
@@ -725,6 +730,7 @@ footer {
     gap: 220px;
 }
 
+/*  */
 .search-form {
     position: relative;
     display: inline-block;
@@ -763,11 +769,12 @@ footer {
     outline: none;
 }
 
-
 .search-button i {
     font-size: 16px;
     vertical-align: middle;
 }
+
+/*  */
 
 .products_cards {
     display: flex;
@@ -880,7 +887,7 @@ footer {
     text-decoration: underline;
 }
 
-
+/*************** СТРАНИЦА ОДНОГО ТОВАРА ****************/
 .tovar {
     display: flex;
     justify-content: center;
@@ -1105,7 +1112,7 @@ footer {
     box-shadow: 2px 2px 13px #0000009c;
 }
 
-
+/*************** СТРАНИЦА ИЗБРАННОГО ****************/
 .favourites {
     padding: 0 0 100px 0;
 }
@@ -1180,7 +1187,7 @@ footer {
     font-weight: 500;
 }
 
-
+/*************** СТРАНИЦА КОРЗИНЫ ****************/
 .basket h2 {
     font-size: 40px;
     margin: 50px 0;
@@ -1321,6 +1328,7 @@ footer {
     box-shadow: 2px 2px 13px #0000009c;
 }
 
+/*************** СТРАНИЦА ПОЛЬЗОВАТЕЛЯ ****************/
 .user h2 {
     display: flex;
     justify-content: center;
@@ -1332,13 +1340,13 @@ footer {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-bottom: 100px;
 }
 
 .user_foto_btn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: start;
+    align-items: center;
 }
 
 .user_foto_btn button {
@@ -1396,6 +1404,7 @@ footer {
     padding: 15px 60px;
     font-size: 15px;
     min-width: 0;
+    margin-bottom: 0;
 }
 
 .user_form input[type="submit"]:hover {
@@ -1408,6 +1417,7 @@ footer {
     margin-top: 20px;
 }
 
+/*************** СТРАНИЦА ВХОДА ****************/
 .login_up {
     display: flex;
     justify-content: center;
@@ -1483,13 +1493,14 @@ footer {
     text-decoration: underline;
 }
 
-.login_up_form input {
+.login_up_form form input {
     border: 1px solid #29231d59;
     padding: 10px 5px;
     min-width: 570px;
     border-radius: 12px;
     background: none;
     margin: 10px 0 0 0;
+    outline: none;
 }
 
 .login_up_form input[type="submit"] {
@@ -1510,8 +1521,7 @@ footer {
     box-shadow: 2px 2px 13px #0000009c;
 }
 
-
-
+/*************** СТРАНИЦА РЕГИСТРАЦИИ ****************/
 .sign_up {
     display: flex;
     justify-content: center;
@@ -1567,6 +1577,7 @@ footer {
 .sign_up_form label {
     font-size: 16px;
     color: #666666;
+    margin-top: 30px;
 }
 
 .sign_up_login {
@@ -1583,12 +1594,13 @@ footer {
     text-decoration: underline;
 }
 
-.sign_up_form input {
+.sign_up_form form input {
     border: 1px solid #29231d59;
     padding: 10px 5px;
     border-radius: 12px;
     background: none;
-    margin: 10px 0 35px 0;
+    margin: 10px 0 5px 0;
+    outline: none;
 }
 
 .sign_up_form input[type="submit"] {
@@ -1611,15 +1623,17 @@ footer {
 
 .sign_up_confid {
     display: flex;
-    margin: 0 10px 0 10px;
+    margin: 0 5px 0 5px;
     gap: 15px;
 }
 
 .sign_up_confid label,
 .sign_up_confid a {
     font-size: 13px;
+    margin: 10px 0 10px 0;
 }
 
+/*************** СТРАНИЦА ОПЛАТЫ ****************/
 .payment {
     display: flex;
     flex-direction: column;
@@ -1900,6 +1914,7 @@ footer {
     font-weight: 500;
 }
 
+/*************** СТРАНИЦА ДОБАВЛЕНИЯ И РЕДАКТИРОВАНИЯ ТОВАРА КАТАЛОГА И КАТЕГОРИИ ****************/
 .add_redact {
     display: flex;
     flex-direction: column;
@@ -1967,6 +1982,7 @@ footer {
     box-shadow: 2px 2px 13px #0000009c;
 }
 
+/*************** СТРАНИЦА УДАЛЕНИЯ ТОВАРА КАТЕГОРИИ И КАТАЛОГА ****************/
 .del {
     display: flex;
     flex-direction: column;
@@ -2000,8 +2016,7 @@ footer {
     color: #5F2417;
 }
 
-
-/* Стили для подсказок */
+/*************** ПОДСКАЗКИ ДЛЯ ИКОНОК В АДМИН ПАНЕЛИ ****************/
 .tooltip {
     position: relative;
     display: inline-block;
@@ -2029,8 +2044,14 @@ footer {
     opacity: 1;
 }
 
+/*************** ФОРМА ПОИСКА ДЛЯ АДМИН ПАНЕЛИ ****************/
+.admin_pan_search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
-
+/*************** ШАПКА ДЛЯ АДМИН ПАНЕЛИ ****************/
 .header_admin {
     display: flex;
     justify-content: center;
@@ -2097,8 +2118,7 @@ footer {
     border-radius: 100%;
 }
 
-
-
+/*************** АДМИН ПАНЕЛЬ ПОЛЬЗОВАТЕЛИ ****************/
 .admin_panel {
     display: flex;
     flex-direction: column;
@@ -2205,15 +2225,7 @@ footer {
     border-radius: 5px;
 }
 
-.admin_pan_search {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-
-
-
+/*************** АДМИН ПАНЕЛЬ КАТЕГОРИЙ ****************/
 .admin_panel_categ {
     display: flex;
     flex-direction: column;
@@ -2316,6 +2328,7 @@ footer {
     justify-content: start;
 }
 
+/*************** АДМИН ПАНЕЛЬ КАТАЛОГ ****************/
 .admin_panel_cata {
     display: flex;
     flex-direction: column;
@@ -2393,8 +2406,7 @@ footer {
     justify-content: start;
 }
 
-
-
+/*************** АДМИН ПАНЕЛЬ ТОВАРЫ ****************/
 .admin_panel_tovar {
     display: flex;
     flex-direction: column;
@@ -2466,7 +2478,6 @@ footer {
     height: 30px;
 }
 
-
 .user_row_tovar .user_id {
     max-width: 138px;
     display: flex;
@@ -2474,7 +2485,20 @@ footer {
     align-self: start;
 }
 
+/*************** СТИЛИ ДЛЯ ОШИБОК ****************/
+.error {
+    font-size: 13px;
+    color: #8e2c16;
+    padding: 2px;
+}
 
+.success {
+    font-size: 13px;
+    color: #348e16;
+    padding: 2px;
+}
+
+/*************** АНИМАЦИЯ ДЛЯ ИЗОБРАЖЕНИЙ БАННЕРА ****************/
 @keyframes anim {
     0% {
         transform: translateY(0px);
@@ -2489,6 +2513,7 @@ footer {
     }
 }
 
+/*************** АДАПТИВ 768PX ****************/
 @media (max-width: 768px) {
 
     .container {
@@ -2504,7 +2529,6 @@ footer {
         margin-top: 35px;
         margin-left: 20px;
     }
-
 
     .banner {
         gap: 0;
@@ -2546,7 +2570,6 @@ footer {
     .banner_cake_mobile {
         display: none;
     }
-
 
     .about_info {
         display: flex;
@@ -2807,7 +2830,6 @@ footer {
         text-decoration: underline;
     }
 
-
     .categories_block {
         display: flex;
         flex-direction: column;
@@ -2999,7 +3021,6 @@ footer {
     .favourites_product:hover {
         box-shadow: 2px 2px 13px #0000009c;
     }
-
 
     .basket h2 {
         font-size: 40px;
@@ -3198,7 +3219,6 @@ footer {
         box-shadow: 2px 2px 13px #0000009c;
     }
 
-
     .payment {
         display: flex;
         flex-direction: column;
@@ -3207,10 +3227,10 @@ footer {
         max-width: 1000px;
         margin-left: 0;
     }
+
     .payment_pay {
         margin: 0;
-    }    
-
+    }
 
     .payment_deliv_label {
         display: flex;
@@ -3228,7 +3248,6 @@ footer {
         align-items: center;
         gap: 34px;
         margin-left: -100px;
-
     }
 
     .payment_deliv_input .payment_fs {
@@ -3444,13 +3463,9 @@ footer {
         margin-top: 10px;
     }
 
-
     .del {
         padding: 100px 0;
     }
-
-
-
 
     .admin_panel {
         display: flex;
@@ -3517,8 +3532,6 @@ footer {
         font-size: 15px;
         text-decoration: underline;
     }
-
-
 
     .admin_panel_categ {
         display: flex;
@@ -3617,7 +3630,6 @@ footer {
     .admin_pan_search {
         display: flex;
         justify-content: space-between;
-
     }
 
     .admin_pan_search .products_search {
@@ -3625,8 +3637,6 @@ footer {
         justify-content: center;
         align-self: start;
     }
-
-
 
     .admin_panel_cata {
         display: flex;
@@ -3715,7 +3725,6 @@ footer {
         height: 30px;
     }
 
-
     .admin_panel_tovar {
         display: flex;
         flex-direction: column;
@@ -3751,7 +3760,6 @@ footer {
         font-size: 15px;
     }
 
-
     .admin_btn_blok_mobail {
         display: none;
     }
@@ -3781,9 +3789,9 @@ footer {
         height: 30px;
     }
 
-
 }
 
+/*************** АДАПТИВ 375PX ****************/
 @media (max-width: 375px) {
 
     .title h1 {
@@ -3805,7 +3813,6 @@ footer {
     .menu {
         display: none;
     }
-
 
     .burger-checkbox {
         display: none;
@@ -3942,7 +3949,6 @@ footer {
         color: #F2EEE9;
     }
 
-
     .banner {
         margin-top: 80px;
         gap: 0;
@@ -4008,7 +4014,6 @@ footer {
         animation: anim 3s ease-in-out infinite;
         min-width: 83px;
         min-height: 113px;
-
     }
 
     .banner_cake_mobile {
@@ -4128,7 +4133,6 @@ footer {
         margin-bottom: 0;
     }
 
-
     .about_cont {
         display: flex;
         justify-content: center;
@@ -4158,7 +4162,6 @@ footer {
     .about_cont__text1 {
         gap: 10px;
     }
-
 
     .about_cont__text1 img {
         max-width: 110px;
@@ -4243,7 +4246,6 @@ footer {
         column-gap: 10px;
         row-gap: 10px;
     }
-
 
     .catalog {
         padding: 0 0 50px 0;
@@ -4450,7 +4452,6 @@ footer {
         gap: 8px;
         padding: 20px 0 50px 0;
     }
-
 
     .favourites {
         padding: 0 0 50px 0;
@@ -4667,7 +4668,6 @@ footer {
         box-shadow: 2px 2px 13px #0000009c;
     }
 
-
     .user h2 {
         display: flex;
         justify-content: center;
@@ -4829,8 +4829,6 @@ footer {
     .login_up_form input[type="submit"]:hover {
         box-shadow: 2px 2px 13px #0000009c;
     }
-
-
 
     .sign_up {
         padding: 50px 0 50px 0;
@@ -5087,9 +5085,6 @@ footer {
         font-size: 20px;
     }
 
-
-
-
     .admin_head {
         display: flex;
         justify-content: space-between;
@@ -5117,7 +5112,6 @@ footer {
         font-size: 20px;
     }
 
-
     .admin_btn_blok {
         display: none;
     }
@@ -5125,7 +5119,6 @@ footer {
     .admin_btn_blok_mobail {
         font-size: 15px;
     }
-
 
     .admin_panel {
         display: flex;
@@ -5212,9 +5205,6 @@ footer {
     .admin_pan_search h2 {
         margin-bottom: 14px;
     }
-
-
-
 
     .admin_panel_categ {
         display: flex;
@@ -5307,7 +5297,6 @@ footer {
     .admin_pan_search {
         display: flex;
         justify-content: space-between;
-
     }
 
     .admin_pan_search .products_search {
@@ -5315,8 +5304,6 @@ footer {
         justify-content: center;
         align-self: start;
     }
-
-
 
     .admin_panel_cata {
         display: flex;
@@ -5408,12 +5395,9 @@ footer {
         height: 30px;
     }
 
-
     .admin_categ_btn {
         padding: 15px 35px;
     }
-
-
 
     .admin_panel_tovar {
         display: flex;

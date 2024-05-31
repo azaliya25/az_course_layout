@@ -25,22 +25,24 @@
         <div class="container">
             <div class="admin_head">
                 <div class="admin_head_block">
-                    <a href="index.html"><h4>CHARLIE</h4></a>
+                    <a href="index.php">
+                        <h4>CHARLIE</h4>
+                    </a>
                     <div class="admin_head_block_icons">
                         <div class="tooltip">
-                            <a href="admin_users.html"><i class="fa-solid fa-user" style="color: #29231d;"></i></a>
+                            <a href="admin_users.php"><i class="fa-solid fa-user" style="color: #29231d;"></i></a>
                             <span class="tooltiptext">пользователи</span>
                         </div>
                         <div class="tooltip">
-                            <a href="admin_categories.html"><i class="fa-solid fa-list" style="color: #F2EEE9;"></i></a>
+                            <a href="admin_categories.php"><i class="fa-solid fa-list" style="color: #F2EEE9;"></i></a>
                             <span class="tooltiptext">категории</span>
                         </div>
                         <div class="tooltip">
-                            <a href="admin_catalog.html"><img src="assets/img/admin_head/icon_b.svg" alt=""></a>
+                            <a href="admin_catalog.php"><img src="assets/img/admin_head/icon_b.svg" alt=""></a>
                             <span class="tooltiptext">каталог</span>
                         </div>
                         <div class="tooltip">
-                            <a href="admin_tovar.html"><i class="fa-solid fa-box" style="color: #29231d;"></i></a>
+                            <a href="admin_tovar.php"><i class="fa-solid fa-box" style="color: #29231d;"></i></a>
                             <span class="tooltiptext">товары</span>
                         </div>
                     </div>
@@ -113,10 +115,9 @@
             </div>
 
         </div>
-        <button onclick="document.location.href='add_cat.html'" class="admin_categ_btn">+ добавить</button>
+        <button onclick="document.location.href='add_cat.php'" class="admin_categ_btn">+ добавить</button>
     </div>
     <!--------------- АДМИН ПАНЕЛЬ КАТЕГОРИЙ --------------->
-
 
 </body>
 
